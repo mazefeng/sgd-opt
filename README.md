@@ -1,6 +1,7 @@
 A comparasion among different variant of Gradient Descent algorithm, based on the MNIST hand-written digit recognition dataset.
 
 The algorithm list include the following:
+
 1. Stochastic Gradient Descent(SGD)
 2. Momentum
 3. Nesterov Accelerated Gradient(NAG)
