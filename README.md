@@ -36,4 +36,5 @@ RMSprop: 96.345% vs 94.51%
 
 Adam: 96.541667% vs 94.12%
 
+![image](https://github.com/mazefeng/sgd-opt/blob/master/image.png)
 
