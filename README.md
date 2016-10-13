@@ -23,16 +23,17 @@ and we use a traditional no-so-deep 3 layer neural network as classifier, with 2
 Here are the training and validating accuracy for each algorithm, with 30 epoches and 100 mini-batch:
 
 SGD: 95.36% vs 94.06%
+
 Momentum: 97.515% vs 94.88%
+
 NAG: 97.466667% vs 94.33%
+
 Adagrad: 96.165% vs 93.95%
+
 Adadelta: 94.651667% vs 93.84%
+
 RMSprop: 96.345% vs 94.51%
+
 Adam: 96.541667% vs 94.12%
-
-
-
-
-
 
 
