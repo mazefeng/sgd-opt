@@ -1,40 +1,47 @@
-A comparasion among different variant of Gradient Descent algorithm, based on the MNIST hand-written digit recognition dataset.
+A Comparison Among Different Variants of Gradient Descent Algorithm
+==
 
-The algorithm list include the following:
+###Introduction
+***
+This script implements and visualizes the performance the following algorithms, base on the MNIST hand-written digit recognition dataset
 
-1. Stochastic Gradient Descent(SGD)
-2. Momentum
-3. Nesterov Accelerated Gradient(NAG)
-4. Adagrad
-5. Adadelta
-6. RMSprop
-7. Adam
+- Stochastic Gradient Descent(SGD)
+- Momentum
+- Nesterov Accelerated Gradient(NAG)
+- Adagrada
+- Adadelta
+- RMSprop
+- Adam
 
-All of the 7 algorithms are described in the blog post <An overview of gradient descent optimization algorithms>
+All the detail of the algorithms are described in the blog post [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/) by Sebastian Ruder
 
-The MNIST dataset contains 60,000 samples for training and 10,000 for validating;
+###Dataset
+***
+The MNIST dataset contains 60,000 samples for training and 10,000 for validating. It is naturally divided into 10 classes corresponding to digit 0 to 9. The amount of samples for each class is well-balanced. Each digit image is pre-processed and rescaled into a 28\*28 gray scale array, ranging from 0 to 255
 
-The dataset is naturally divide into 10 classes corresponding to digit 0 to 9
-The amount of samples for each class is well-balanced.
-Each digit is scale into a 28p28 gray scale image
+###Model
+***
+A traditional 3 layer neural network is adopted, with 28\*28 input units, 25 hidden units and a softmax output layer
 
-and we use a traditional no-so-deep 3 layer neural network as classifier, with 25 hidden units
+###Performance
+***
+Here are the training and validating accuracy of each algorithm, with 30 epochs and 100 mini-batch:
 
-Here are the training and validating accuracy for each algorithm, with 30 epoches and 100 mini-batch:
+- SGD: `95.36% vs 94.06%`
+- Momentum: `97.52% vs 94.88%`
+- NAG: `97.47% vs 94.33%`
+- Adagrad: `96.17% vs 93.95%`
+- Adadelta: `94.65% vs 93.84%`
+- RMSprop: `96.35% vs 94.51%`
+- Adam: `96.54% vs 94.12%`
 
-SGD: 95.36% vs 94.06%
-
-Momentum: 97.515% vs 94.88%
-
-NAG: 97.466667% vs 94.33%
-
-Adagrad: 96.165% vs 93.95%
-
-Adadelta: 94.651667% vs 93.84%
-
-RMSprop: 96.345% vs 94.51%
-
-Adam: 96.541667% vs 94.12%
-
+###Visualization
+***
+Here is the visualization of cost decreasing w.r.t each mini-batch within the first 10 epochs: 
 ![image](https://github.com/mazefeng/sgd-opt/blob/master/image.png)
+
+###Conclusion
+***
+The variants of gradient descent algorithm can be roughly divided into 2 types: `Momentum-like SGD` and `Adaptive learning rate SGD`. As mentioned in the blog post `Adaptive learning rate SGD` is suitable for large-scale sparse optimization problem (e.g, predict CTR). While in this case, data is not sparse,  `Momentum-like SGD` significantly outperforms the others.
+
 
