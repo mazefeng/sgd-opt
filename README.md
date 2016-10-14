@@ -21,7 +21,7 @@ The MNIST dataset contains `60,000` samples for training and `10,000` for valida
 
 ###Model
 ***
-A traditional 3 layer neural network is adopted, with `28\*28 input units, 25 hidden units and a softmax output layer`
+A traditional 3 layer neural network is adopted, with `28*28 input units, 25 hidden units and a softmax output layer`
 
 ###Performance
 ***
